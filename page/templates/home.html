@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>home.html</h1>
+    <!--urls.py의 'new'라는 url로 이동해라-->
+    <a href="{% url 'new' %}"><button>글 쓰러가기</button></a>
+    <!--blogs : views에게 넘겨받은 모든글-->
+    <!-- blogs의 글으 순서대로 하나씩 접근해라. 접근하는 글은 blog라는 이름으로 다루겠다-->
+    {% for blog in blogs %}
+        <h2>{{ blog.title }}</h2>
+        <p>{{ blog.time}}</p>
+        <p>{{ blog.content}}</p>
+    <hr>
+    {% endfor %}
+</body>
+</html>

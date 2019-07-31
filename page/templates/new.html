@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>새 글 작성 페이지</h1>
+    <!--form 안에 적은 데이터를 전송할 곳을 지정-->
+    <form action="{% url 'create' %}">
+        <!--title이라는 이름으로 전달할 텍스트 형태의 데이터를 입력받을 공간-->
+        <input type="text" name="title">
+        <br><br>
+        <textarea name="content" id="" cols="30" rows="10"></textarea>
+        <!--form을 작동시키는 버튼, form안에 작성된 모든 데이터를 정해진 주소에 전달-->
+        <input type="submit" value="글 저장!">
+    </form>
+</body>
+</html>
